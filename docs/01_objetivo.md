@@ -14,7 +14,7 @@ Como se distribuem os acidentes por tipo e por gravidade?
 
 Há indícios de relação entre características do local/tipo de via e gravidade?
 
-##Escopo
+## Escopo
 
 Base utilizada: accidents_2017_to_2023_portugues.csv (fonte a documentar na etapa de busca/coleta).
 Período: 2017 a 2023.
