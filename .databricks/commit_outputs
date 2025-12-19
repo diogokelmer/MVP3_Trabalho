@@ -11,4 +11,4 @@
 # More examples can be found here: https://docs.databricks.com/repos/setup.html#patterns-for-repo-config-file
 
 # Uncomment the following pattern to include output for all notebooks
-*
+# **
