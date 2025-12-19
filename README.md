@@ -6,6 +6,12 @@ Este repositório contém o desenvolvimento de um MVP de Engenharia de Dados cuj
 
 O projeto foi desenvolvido na plataforma **Databricks Community Edition**, utilizando **Delta Lake** para persistência dos dados e seguindo uma arquitetura em camadas (**RAW → BRONZE → SILVER → GOLD**), com modelagem final em **Esquema Estrela**, adequada para análises analíticas e gerenciais.
 
+Acessos:
+- [Autoavaliação](https://github.com/diogokelmer/MVP3_Trabalho/blob/main/docs/autoavaliacao.md)
+- [Catálogo de Dados](https://github.com/diogokelmer/MVP3_Trabalho/blob/main/docs/catalogo_dados.md)
+- [Notebooks com Outputs](https://github.com/diogokelmer/MVP3_Trabalho/tree/main/notebooks/com_output)
+- [Notebooks sem Outputs](https://github.com/diogokelmer/MVP3_Trabalho/tree/main/notebooks/sem_output)
+
 ---
 
 ## Objetivo Geral
@@ -21,7 +27,7 @@ Analisar os acidentes de trânsito registrados no Brasil entre 2017 e 2023, iden
 - Existem padrões temporais (mês e dia da semana) associados a maior incidência?
 - Como se distribuem os acidentes por tipo e por gravidade?
 
-Todas as perguntas foram respondidas no notebook 05_solucao_problema
+Todas as perguntas foram respondidas no notebook [05_solucao_problema](https://github.com/diogokelmer/MVP3_Trabalho/blob/main/notebooks/com_output/05_solucao_problema.ipynb)
 
 ---
 
@@ -75,7 +81,7 @@ A descrição detalhada das tabelas, atributos, domínios e linhagem dos dados p
 ---
 ## Análise de Qualidade dos Dados
 
-A análise de qualidade dos dados foi realizada sobre a **camada GOLD** e pode ser encontrada no notebook 04_analise_qualidade_dados.
+A análise de qualidade dos dados foi realizada sobre a **camada GOLD** e pode ser encontrada no notebook [04_analise_qualidade_dados](https://github.com/diogokelmer/MVP3_Trabalho/blob/main/notebooks/com_output/04_analise_qualidade_dados.ipynb).
 
 As principais verificações realizadas foram:
 
@@ -90,7 +96,7 @@ Os resultados indicaram que o conjunto de dados apresenta **boa qualidade geral*
 
 ## Solução dos Problemas
 
-A análise e solução completa pode ser encotnrada em 05_solucao_problema.
+A análise e solução completa pode ser encotnrada em [05_solucao_problema](https://github.com/diogokelmer/MVP3_Trabalho/blob/main/notebooks/com_output/05_solucao_problema.ipynb).
 
 ### Principais Resultados
 
@@ -113,19 +119,6 @@ A análise mensal indica maior concentração de acidentes nos meses do **primei
 
 Os tipos de acidentes mais frequentes são as **colisões traseiras**, seguidas por saídas de leito carroçável e colisões transversais. Esses eventos representam a maior parte dos registros e, em geral, resultam principalmente em vítimas feridas, com menor letalidade proporcional. Por outro lado, ao analisar os acidentes com **vítimas fatais**, destacam-se principalmente as **colisões frontais** e os **atropelamentos de pedestres**. Embora menos frequentes, esses tipos apresentam maior gravidade, indicando que a severidade dos acidentes não está necessariamente relacionada à sua frequência, mas sim à sua natureza e ao nível de exposição das vítimas.
 
----
-
-## Autoavaliação
-
-Os objetivos definidos no início do trabalho foram majoritariamente atingidos. Foi possível construir um pipeline completo de dados em nuvem, desde a ingestão até a análise final, utilizando boas práticas de engenharia de dados, persistência em Delta Lake e modelagem dimensional em esquema estrela.
-
-Entre as principais dificuldades encontradas durante o desenvolvimento do MVP, destacam-se:
-
-- A configuração inicial da persistência de tabelas Delta na Databricks Community Edition.
-- A necessidade de refatoração da camada GOLD para garantir a persistência adequada das dimensões e da tabela fato.
-- Ajustes iterativos na modelagem para viabilizar consultas analíticas consistentes e alinhadas às perguntas de negócio.
-
-Apesar desses desafios, o processo contribuiu significativamente para o aprofundamento prático em pipelines de dados, modelagem dimensional e análise exploratória orientada a negócio.
 
 ---
 

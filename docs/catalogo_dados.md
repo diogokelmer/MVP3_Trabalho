@@ -168,8 +168,18 @@ Dimensão que consolida as características e o contexto do acidente, incluindo 
 
 ## 6. Qualidade dos Dados
 
+A análise de qualidade dos dados foi realizada sobre a camada gold no notebook [04_analise_qualidade_dados](https://github.com/diogokelmer/MVP3_Trabalho/blob/main/notebooks/com_output/04_analise_qualidade_dados.ipynb), por representar o conjunto final de dados utilizado nas análises e na resposta às perguntas de negócio deste MVP.
+
+Inicialmente, foi realizada a verificação de volume, que indicou a presença de 463.152 registros na camada Gold. Esse valor é consistente com o volume observado nas camadas anteriores do pipeline (Bronze e Silver), evidenciando que não houve perda de registros durante os processos de transformação e modelagem dos dados.
+
+Em seguida, foi conduzida a verificação de valores nulos nos principais atributos numéricos relacionados à gravidade dos acidentes, tais como número de mortos, feridos e veículos envolvidos. Os resultados mostraram ausência de valores nulos nesses campos, indicando que o tratamento aplicado na camada Silver foi eficaz e garantiu a completude dos dados para análise.
+
+A análise de valores fora do domínio esperado também não identificou registros inválidos, como valores negativos para quantidades de mortos, feridos ou veículos. Esse resultado reforça a consistência lógica do conjunto de dados e sua adequação para análises quantitativas.
+
+Por fim, foi realizada uma análise de distribuição básica (sanidade) dos indicadores de gravidade, considerando valores mínimos, máximos e médias. As estatísticas observadas apresentaram comportamento coerente com o fenômeno analisado, sem a presença de valores extremos inconsistentes ou incompatíveis com o contexto de acidentes de trânsito.
+
+De forma geral, os resultados indicam que o conjunto de dados da camada Gold apresenta boa qualidade, consistência e integridade, estando apto para suportar as análises analíticas propostas e a resposta às perguntas de negócio definidas nos objetivos deste MVP.
+
 - Valores ausentes em campos numéricos foram tratados com substituição por zero na camada Silver.
 - A coluna de data já se encontrava em formato `date`, não sendo necessária conversão adicional.
 - Não foram identificados valores fora do domínio esperado para os principais indicadores de gravidade.
-
-Este catálogo de dados fornece uma visão completa da estrutura, origem, transformação e utilização dos dados no MVP, garantindo rastreabilidade, governança e entendimento adequado para análistas e tomadores de decisão.
