@@ -1,0 +1,17 @@
+## Autoavaliação
+
+O desenvolvimento deste MVP permitiu colocar em prática, de forma integrada, os principais conceitos abordados ao longo do curso de Engenharia de Dados. Os objetivos definidos inicialmente foram, em sua maioria, atingidos, especialmente no que diz respeito à construção de um pipeline completo de dados em nuvem, abrangendo desde a ingestão dos dados brutos até a modelagem final e análise orientada a perguntas de negócio.
+
+Ao longo do projeto, foi possível estruturar um pipeline robusto utilizando a plataforma Databricks Community Edition, com persistência dos dados em Delta Lake e organização em camadas RAW, BRONZE, SILVER e GOLD. A modelagem dimensional em esquema estrela representou um avanço importante em relação a abordagens mais simples, permitindo consultas analíticas mais claras, eficientes e alinhadas com boas práticas de Data Warehouse.
+
+O processo, no entanto, não esteve livre de dificuldades. Uma das principais barreiras enfrentadas foi a configuração inicial da persistência de tabelas Delta no ambiente da Databricks Community Edition. Questões relacionadas à criação e utilização de volumes, bem como ao correto salvamento das tabelas, exigiram estudo adicional da documentação e diversos testes até que a solução estivesse estável.
+
+Outro ponto desafiador foi a construção e posterior refatoração da camada GOLD. Inicialmente, as dimensões e a tabela fato não estavam devidamente persistidas, o que inviabilizava consultas analíticas mais complexas e o uso consistente de SQL sobre o modelo estrela. Essa limitação levou à necessidade de revisar a estratégia adotada, persistir corretamente cada dimensão e a tabela fato, e garantir que os relacionamentos estivessem coerentes. Apesar de trabalhoso, esse processo foi extremamente relevante para consolidar o entendimento sobre modelagem dimensional e sua aplicação prática.
+
+Além disso, a modelagem dos dados passou por ajustes iterativos à medida que as perguntas de negócio eram exploradas. Em diversos momentos, foi necessário adaptar o modelo para facilitar determinadas análises, o que evidenciou, na prática, a relação direta entre o entendimento do problema de negócio e as decisões técnicas de modelagem de dados.
+
+Do ponto de vista analítico, a etapa de análise de qualidade dos dados reforçou a importância de validar os dados antes de qualquer interpretação. A verificação de volume, valores nulos, domínios e sanidade estatística trouxe maior segurança para as análises realizadas e contribuiu para conclusões mais confiáveis.
+
+De forma geral, o desenvolvimento deste MVP representou um aprendizado significativo não apenas em termos técnicos, mas também metodológicos. O projeto reforçou a importância do planejamento inicial, da documentação ao longo do processo e da capacidade de lidar com problemas técnicos de forma iterativa. Como resultado, este trabalho se consolida como uma peça relevante de portfólio, demonstrando a capacidade de estruturar, modelar e analisar dados de ponta a ponta em um ambiente de dados moderno.
+
+Como trabalhos futuros, este MVP pode ser expandido com a inclusão de novas fontes de dados, como informações de tráfego, clima ou frota veicular, bem como com o desenvolvimento de visualizações interativas ou modelos preditivos. Essas evoluções permitiriam aprofundar ainda mais as análises e aumentar o valor analítico do projeto.
