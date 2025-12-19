@@ -12,3 +12,5 @@
 
 # Uncomment the following pattern to include output for all notebooks
 # **
+
+notebooks/05_solucao_problema.ipynb
